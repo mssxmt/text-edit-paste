@@ -1,6 +1,6 @@
 # Text Edit & Paste
 
-Edit and paste the text
+This is a Raycast extension that allows you to edit and paste text directly to the active window.
 
 ## Features
 
