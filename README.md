@@ -22,9 +22,11 @@ You can also save frequently used text as snippets for later use. To save a snip
 npm run dev
 ```
 
-## Options
+## screenshots
 
-N/A
+![image](https://github.com/user-attachments/assets/ce809fed-edd1-46db-a373-2544248053bf)
+![image](https://github.com/user-attachments/assets/4bd75426-3b85-49a6-8ead-6eb9d14b34dc)
+![image](https://github.com/user-attachments/assets/7f48b8fe-0b96-43de-a6fd-7ac8401e8e36)
 
 ## License
 
