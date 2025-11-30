@@ -6,10 +6,11 @@
   "icon": "extension-icon.png",
   "author": "mssxmt",
   "license": "MIT",
+  "categories": ["Productivity"],
   "commands": [
     {
       "name": "text-edit-paste",
-      "title": "Edit & Paste",
+      "title": "Edit and Paste Text",
       "subtitle": "edit your text and paste",
       "description": "edit your text and paste",
       "mode": "view"
