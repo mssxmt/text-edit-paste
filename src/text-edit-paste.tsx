@@ -1,7 +1,6 @@
 import { List, Form, ActionPanel, Action, showToast, Clipboard, closeMainWindow } from "@raycast/api";
 import { useLocalStorage } from "@raycast/utils";
 import { useState } from "react";
-import { runAppleScript } from "@raycast/utils";
 
 type Snippet = {
   id: string;
@@ -23,15 +22,8 @@ export default function Command() {
 
     if (text && text.trim() !== "") {
       try {
-        // Copy text to clipboard
-        await Clipboard.copy(text);
-
-        // Close the Raycast window first to ensure paste goes to the previous active window
+        await Clipboard.paste(text);
         await closeMainWindow();
-
-        // Use AppleScript to paste the text in the active window
-        await runAppleScript('tell application "System Events" to keystroke "v" using command down');
-
         showToast({ title: "Text pasted", message: "Text has been pasted to active window" });
       } catch (error) {
         console.error("Error pasting text:", error);
@@ -119,7 +111,7 @@ export default function Command() {
       </Form>
     );
   } else {
-    // 検索テキストに基づいてスニペットをフィルタリング
+    // Filter snippets based on search text
     const filteredSnippets = searchText
       ? (snippets || []).filter(
           (snippet) =>
