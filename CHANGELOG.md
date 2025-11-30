@@ -1,3 +1,3 @@
 # Text Edit & Paste Changelog
 
-## [Initial Version] - 2025-11-30
+## [Initial Version] - {PR_MERGE_DATE}
