@@ -1,5 +1,5 @@
 import { List, Form, ActionPanel, Action, showToast, Clipboard, closeMainWindow } from "@raycast/api";
-import { useLocalStorage } from "@raycast/utils";
+import { useLocalStorage, showFailureToast } from "@raycast/utils";
 import { useState } from "react";
 
 type Snippet = {
@@ -26,8 +26,7 @@ export default function Command() {
         await closeMainWindow();
         showToast({ title: "Text pasted", message: "Text has been pasted to active window" });
       } catch (error) {
-        console.error("Error pasting text:", error);
-        showToast({ title: "Error", message: "Could not paste text to active window" });
+        showFailureToast(error, { title: "Could not paste text to active window" });
       }
     } else {
       showToast({ title: "Warning", message: "No text to paste" });
